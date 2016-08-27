@@ -17,9 +17,9 @@ public class Account {
 	private String username;
 	private String password;
 	private String email;
-	private ArrayList<Picture> posts = new ArrayList<Picture>();
-	private ArrayList<Picture> upvotes = new ArrayList<Picture>();
-	private ArrayList<Picture> comments = new ArrayList<Picture>();
+	private ArrayList<Picture> posts;
+	private ArrayList<Picture> upvotes;
+	private ArrayList<Picture> comments;
 	
 	Account(String username, String email, String password, Gender gender, Country country){
 		this.username = username;
@@ -27,6 +27,9 @@ public class Account {
 		this.password = password;
 		this.gender = gender;
 		this.country = country;
+		this.posts  = new ArrayList<Picture>();
+		this.upvotes = new ArrayList<Picture>();
+		this.comments = new ArrayList<Picture>();
 	}
 	
 	public File getAvatar() {

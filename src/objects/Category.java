@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Category {
 	private String name;
-	private ArrayList<Picture> pics = new ArrayList<Picture>();
+	private ArrayList<Picture> pics;
 	
 	Category(String name){
 		this.name = name;
+		this.pics = new ArrayList<Picture>();
 	}
 	
 	public void addPic(Picture pic){
