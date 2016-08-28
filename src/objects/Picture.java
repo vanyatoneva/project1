@@ -19,8 +19,7 @@ public class Picture {
 		category.addPic(this);
 	}
 	
-	public void addComment(Account account, Comment comment){
-		account.addComment(this);
+	public void addComment(Comment comment){
 		comments.add(comment);
 	}
 
