@@ -2,12 +2,14 @@ package objects;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Picture {
 	private File pic;
 	private String description;
 	private Category category;
 	private int points;
+	private Date uploadDate;
 	private ArrayList<Comment> comments;
 	
 	Picture(File pic, String description, Category category){
