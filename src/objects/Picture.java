@@ -18,6 +18,7 @@ public class Picture {
 		this.category = category;
 		this.points = 0;
 		this.comments = new ArrayList<Comment>();
+		category.addPic(this);
 	}
 	
 	public void addComment(Comment comment){
@@ -38,10 +39,6 @@ public class Picture {
 
 	public void setPoints(int points) {
 		this.points = points;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
 	}
 	
 }

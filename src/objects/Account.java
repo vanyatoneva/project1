@@ -53,8 +53,9 @@ public class Account {
 	public ArrayList<Picture> getComments() {
 		return comments;
 	}
-	public void addComment(Picture newComment){
-		comments.add(newComment);
+	public void addComment(Picture picCommented, Comment com){
+		comments.add(picCommented);
+		picCommented.addComment(com);
 	} 
 	public ArrayList<Picture> getPosts() {
 		return posts;
@@ -81,5 +82,11 @@ public class Account {
 		this.email = email;
 	}
 	
+	public void upvote(Picture pic, short vote){ // 1 or -1
+		pic.setPoints(pic.getPoints() + vote);
+		if(vote == 1){
+			this.addUpvote(pic);
+		}
+	}
 	
 }
