@@ -4,27 +4,28 @@ import java.util.ArrayList;
 
 public class Category {
 	private String name;
-	private ArrayList<Picture> pics;
+	//TODO make posts treeset
+	private ArrayList<Post> posts;
 	
 	Category(String name){
 		this.name = name;
-		this.pics = new ArrayList<Picture>();
+		this.posts = new ArrayList<Post>();
 	}
 	
-	public void addPic(Picture pic){
-		pics.add(pic);
+	public void addPost(Post post){
+		posts.add(post);
 	}
 	
-	public ArrayList<Picture> getFresh(){
-		ArrayList<Picture> fresh = new ArrayList<Picture>();
-		for(int i = pics.size(); i >= 0; i--){
-			fresh.add(pics.get(i));
+	public ArrayList<Post> getFresh(){
+		ArrayList<Post> fresh = new ArrayList<Post>();
+		for(int i = posts.size(); i >= 0; i--){
+			fresh.add(posts.get(i));
 		}
 		return fresh;
 	}
 	
-	public ArrayList<Picture> getHot(){
-		ArrayList<Picture> hot = new ArrayList<Picture>();
+	public ArrayList<Post> getHot(){
+		ArrayList<Post> hot = new ArrayList<Post>();
 		return hot;
 	}
 }
